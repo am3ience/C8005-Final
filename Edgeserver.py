@@ -118,11 +118,15 @@ def edgeFunction(entries):
 					try:
 						data = rSock.recv(bufferSize)
 						clientAddress, clientSocket = rSock.getpeername()
+						
+						print "\nReceived " + data + " from " + " Client " + str(clientAddress) +  ":" + str(clientSocket) 
 						rSize = len(data)
 						ReceivedTotal += rSize
 						sSize = len(data)
 						SentTotal += sSize
 						rSock.send(data)
+						print "\nSent " + data + " back to " + " Client " + str(clientAddress) +  ":" + str(clientSocket) 
+						
 
 						requestCounter += 1
 						
