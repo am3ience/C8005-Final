@@ -72,8 +72,8 @@ def sendData(srcsocket,srcaddr,destsocket,destaddr):
 		print "\nReceived " + data + " from " + str(srcaddr) + " forwarding to " + str(destaddr)
 		if data == 'quit':
 			destsocket.send(data)
-			srcsocket.close()
-			destsocket.close()
+			#srcsocket.close()
+			#destsocket.close()
 			break
 		destsocket.send(data)
 
